@@ -40,7 +40,7 @@ with open('01.txt') as f:
         lines.append(new_line)
         max_x = max([max_x, new_line.x1, new_line.x2])
         max_y = max([max_y, new_line.y1, new_line.y2])
-grid = [[0 for x in range(max_x+1)]for _ in range(max_y+1)]
+grid = [[0 for _ in range(max_x+1)]for _ in range(max_y+1)]
 
 for line in lines:
     if not line.diagonal():
@@ -50,7 +50,7 @@ for line in lines:
 print('Part 1:', sum([sum([1 for y in x if y > 1]) for x in grid]))
 
 
-grid = [[0 for x in range(max_x+1)]for _ in range(max_y+1)]
+grid = [[0 for _ in range(max_x+1)]for _ in range(max_y+1)]
 
 for line in lines:
     for point in line.line_path():

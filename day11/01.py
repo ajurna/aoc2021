@@ -10,7 +10,6 @@ class Point(NamedTuple):
         return Point(self.x + other.x, self.y + other.y)
 
     def neighbours(self, max_x=math.inf, max_y=math.inf):
-        # directions = [Point(x, y) for x in (-1, 0, 1) for y in (-1, 0, 1)]
         directions = (Point(x=-1, y=-1), Point(x=-1, y=0), Point(x=-1, y=1), Point(x=0, y=-1), Point(x=0, y=1),
                       Point(x=1, y=-1), Point(x=1, y=0), Point(x=1, y=1))
         return (self + p for p in directions if 0 <= (self + p).x < max_x and 0 <= (self + p).y < max_y)
