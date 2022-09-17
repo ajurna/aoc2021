@@ -21,10 +21,21 @@ category = "main"
 optional = false
 python-versions = "*"
 
+[[package]]
+name = "pyparsing"
+version = "3.0.6"
+description = "Python parsing module"
+category = "main"
+optional = false
+python-versions = ">=3.6"
+
+[package.extras]
+diagrams = ["jinja2", "railroad-diagrams"]
+
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.10"
-content-hash = "9b656fa0917f2230cf7d66a975026f7e585aa12f4cd2bce405077c6d854e9a28"
+content-hash = "e5ae1ca6d82c6f23ed6aeef15932dd6c7118d1a6d53110fb74fa410328266fa5"
 
 [metadata.files]
 networkx = [
@@ -33,4 +44,8 @@ networkx = [
 ]
 parse = [
     {file = "parse-1.19.0.tar.gz", hash = "sha256:9ff82852bcb65d139813e2a5197627a94966245c897796760a3a2a8eb66f020b"},
+]
+pyparsing = [
+    {file = "pyparsing-3.0.6-py3-none-any.whl", hash = "sha256:04ff808a5b90911829c55c4e26f75fa5ca8a2f5f36aa3a51f68e27033341d3e4"},
+    {file = "pyparsing-3.0.6.tar.gz", hash = "sha256:d9bdec0013ef1eb5a84ab39a3b3868911598afa494f5faa038647101504e2b81"},
 ]
